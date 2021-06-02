@@ -1,0 +1,27 @@
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+<div class="table-responsive ">
+    <table class="table table-hover table-md">
+      <thead style="position: sticky;top: 0">
+        <tr>
+          <th>S.No</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of users | async; let index=index;">
+         <td>{{index+1}}</td>
+         <td>{{item.first_name}}</td>
+         <td>{{item.last_name}}</td>
+         <td>{{item.email}}</td>
+         <td>{{item.age}}</td>
+         <td (click)="deleteUser(index,item.email)"><i class="fa fa-trash-o fa-lg icon"></i></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div> 
+</div>

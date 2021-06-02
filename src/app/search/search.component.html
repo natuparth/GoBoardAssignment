@@ -1,0 +1,32 @@
+<div class="cont">
+   <form >
+    <div class="input-group" style="gap: 20px;">
+      <div class="form-group" style="margin-bottom: 0%;">
+        <label for="First">First Name</label>
+        <input (input)="onclear()" type="text" class="form-control" id="First" placeholder="First name" [(ngModel)]="firstName" name="firstName">
+      </div>
+      <div class="form-group " style="margin-bottom: 0%;">
+        <label for="Last">Last Name</label>
+        <input (input)="onclear()" type="text" id="Last" class="form-control" placeholder="Last name" [(ngModel)]="lastName" name="lastName">
+      </div>
+    </div>
+    <div class="input-group" style="gap: 20px;">
+      <div class="form-group " style="margin-bottom: 0%;">
+        <label for="Email">Email</label>
+        <input (input)="onclear()" type="text" id="Email" class="form-control" placeholder="Email" [(ngModel)]="email" name="email">
+      </div>
+      <div class="form-group " style="margin-bottom: 0%;">
+        <label for="Age">Age</label>
+         <input (input)="onclear()" type="number" id="Age" class="form-control" placeholder="Age" [(ngModel)]="age" name="age"/>
+        </div>
+      </div>
+    </form> 
+    <div>
+    <button (click)="search()"  [disabled]= "!lastName && !firstName && !email && !age " type="button" style="margin-right: 20px" class="btn btn-primary">
+    Search <i class="fa fa-search"></i>
+   </button> 
+   <button  (click)="clear()" [disabled]= "!(lastName || firstName || email || age) " type="button" class="btn btn-primary">
+    Clear <i class="fa fa-clear"></i>
+   </button>
+   </div>
+  </div>

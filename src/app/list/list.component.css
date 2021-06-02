@@ -1,0 +1,14 @@
+.icon:hover{
+    cursor: pointer;
+}
+
+.my-custom-scrollbar {
+    border: 1px solid black;
+    position: relative;
+    height: 500px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
+   
